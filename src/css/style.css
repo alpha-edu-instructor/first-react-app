@@ -1,145 +1,88 @@
-@import './reset.css';
+@import "./reset.css";
 
 :root {
-  --purple: #78258d;
-  --purple-hover: #9f4cb6;
-  --bg: #fdf5ff;
+  --black: #293133;
+  --red: #e32636;
+  --red-hover: #c41e3a;
+  --green: #47a76a;
+  --green-hover: #1cac78;
+  --bg: #edfcfd;
   --border: #b2b2b2;
 }
 
 body {
-  font-family: 'Raleway', serif;
+  font-family: "Ubuntu", serif;
   background: var(--bg);
 }
 
-.header {
-  background: #fff;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.nav {
-  width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#logo {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-#login-btn {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 10px;
-  background: var(--purple);
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  transition: 0.2s ease;
-}
-
-#login-btn:hover {
-  cursor: pointer;
-  background: var(--purple-hover);
-}
-
-.title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 36px;
-}
-
-.main {
+.app {
   width: 1200px;
   margin: 100px auto;
 }
 
-.grid {
+.container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 24px 32px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px 40px;
 }
 
-.song {
-  background: #fff;
-  padding: 20px 24px;
+.counter {
+  width: 360px;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 12px;
+  background: #fff;
 }
 
-.song-image {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+.counter-header {
+  border-radius: 12px 12px 0 0;
+  background: var(--black);
+  padding: 12px 24px;
+  color: var(--bg);
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
 }
 
-.song-content {
-  margin-top: 14px;
+.counter-body {
+  padding: 48px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.song-title {
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--purple);
-  margin-bottom: 4px;
-}
-
-.song-btn {
-  border-radius: 50%;
+.counter-btn {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid var(--black);
+  border-radius: 100%;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 28px;
   color: #fff;
-  font-weight: 900;
-  width: 36px;
-  height: 36px;
-  background: var(--purple);
   transition: 0.2s ease;
 }
 
-.song-btn:hover {
-  cursor: pointer;
-  background: var(--purple-hover);
-}
-
-.song-author {
-  font-weight: 300;
-  font-size: 14px;
-}
-
-.footer {
-  background: #fff;
-  padding: 24px 0;
-  border-top: 1px solid var(--border);
-}
-
-.footer-container {
-  width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.footer-logo {
-  font-size: 20px;
+.counter-number {
+  font-size: 56px;
   font-weight: 700;
-  margin-bottom: 12px;
+  color: var(--black);
 }
 
-.footer-text {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 300;
+.decrement {
+  background: var(--red);
 }
 
-.footer-part {
-  max-width: 360px;
+.decrement:hover {
+  background: var(--red-hover);
+}
+
+.increment {
+  background: var(--green);
+}
+
+.increment:hover {
+  background: var(--green-hover);
 }

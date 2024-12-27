@@ -1,15 +1,18 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SongList from './components/SongList';
-import './css/style.css';
+import Counter from "./components/Counter";
+import "./css/style.css";
 
 function App() {
   return (
-    <>
-      <Header />
-      <SongList />
-      <Footer />
-    </>
+    <div className="app">
+      <div className="container">
+        <Counter title="Первый счетчик" />
+        <Counter title="Второй счетчик" />
+        <Counter title="Третий счетчик" />
+        <Counter title="Четвертый счетчик" />
+        <Counter title="Пятый счетчик" />
+        <Counter title="Шестой счетчик" />
+      </div>
+    </div>
   );
 }
 
